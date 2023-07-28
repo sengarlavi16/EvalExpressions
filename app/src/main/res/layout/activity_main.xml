@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:overScrollMode="never"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/txtExpEvaluate"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="@string/evaluate_the_expressions"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_20sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="@dimen/_20dp"/>
+
+                <TextView
+                    android:id="@+id/txtDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtExpEvaluate"
+                    android:textSize="@dimen/_18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginHorizontal="@dimen/_15dp"/>
+
+                <EditText
+                    android:id="@+id/edtExpressions"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200dp"
+                    android:maxLines="50"
+                    app:layout_constraintTop_toBottomOf="@id/txtDescription"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:layout_marginHorizontal="@dimen/_15dp"
+                    android:background="@drawable/rounded10_grey_bdr"
+                    android:hint="@string/write_expressions"
+                    android:textSize="@dimen/_16sp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#A5A5A5"
+                    android:gravity="top"
+                    android:scrollbars="vertical"
+                    android:scrollIndicators="right"
+                    android:padding="@dimen/_10dp"/>
+
+                <TextView
+                    android:id="@+id/txtSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/edtExpressions"
+                    android:text="@string/evaluate"
+                    android:textSize="@dimen/_18sp"
+                    android:textColor="@color/white"
+                    android:background="@color/black"
+                    android:layout_marginTop="@dimen/_10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:paddingHorizontal="@dimen/_20dp"
+                    android:paddingVertical="@dimen/_10dp"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:visibility="gone"
+                    android:id="@+id/consResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtSubmit">
+
+                    <TextView
+                        android:id="@+id/txtResult"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/result"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/txtHistory"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textSize="@dimen/_18sp"
+                        android:layout_marginHorizontal="@dimen/_15dp"
+                        android:paddingVertical="@dimen/_5dp"
+                        android:textColor="@color/black"
+                        android:gravity="center"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyresult"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginHorizontal="@dimen/_10dp"
+                        app:layout_constraintTop_toBottomOf="@id/txtResult"/>
+
+                    <TextView
+                        android:id="@+id/txtHistory"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/history"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/txtResult"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textSize="@dimen/_18sp"
+                        android:textColor="@color/black"
+                        android:paddingVertical="@dimen/_5dp"
+                        android:layout_marginHorizontal="@dimen/_15dp"
+                        android:gravity="center"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:visibility="gone"
+                        android:id="@+id/recyHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginHorizontal="@dimen/_10dp"
+                        app:layout_constraintTop_toBottomOf="@id/txtHistory"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

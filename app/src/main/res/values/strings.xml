@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">EvalExpressions</string>
+    <string name="write_expressions">Write Expressions</string>
+    <string name="evaluate">Evaluate</string>
+    <string name="result">Result</string>
+    <string name="evaluate_the_expressions">Evaluate the Expressions</string>
+    <string name="description">Write the mathematical expressions to evaluate and write each different expression in new line.</string>
+    <string name="history">History</string>
+    <string name="timestamp">Timestamp</string>
+</resources>

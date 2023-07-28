@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_5dp"
+    android:layout_marginHorizontal="@dimen/_5dp"
+    android:layout_marginVertical="@dimen/_10dp"
+    android:id="@+id/conslayout">
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/timestamp"
+        android:textSize="@dimen/_16sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_10dp"/>
+
+    <TextView
+        android:id="@+id/txtExpression"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/evaluate_the_expressions"
+        android:textSize="@dimen/_16sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/txtTime"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_5dp"/>
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/result"
+        android:textSize="@dimen/_16sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/txtTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_5dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
